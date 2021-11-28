@@ -1,7 +1,7 @@
 <div align="center">
   <hr />
   <p>
-      <img width="400" src="assets\logo.png" alt="EULERA" />
+      <img width="300" src="assets\logo.png" alt="EULERA" />
       
 
   </p>
