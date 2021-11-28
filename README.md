@@ -1,7 +1,7 @@
 <div align="center">
   <hr />
   <p>
-      <img width="300" src="assets\logo.png" alt="EULERA" />
+      <img width="200" src="assets\logo.png" alt="EULERA" />
       
 
   </p>
@@ -14,7 +14,7 @@
 
 [![Language](https://img.shields.io/badge/Language-Python-green?style)](https://github.com/s0v1x)
 [![framework](https://img.shields.io/badge/Framework-FastAPI-blue?style)](https://fastapi.tiangolo.com/)
-[![framework](https://img.shields.io/badge/Framework-Dash-blue?style)](https://fastapi.tiangolo.com/)
+[![framework](https://img.shields.io/badge/Framework-Dash-blue?style)](https://dash.plotly.com/)
 [![Star Badge](https://img.shields.io/static/v1?label=%F0%9F%8C%9F&message=If%20Useful&style=style=flatcolor=BC4E99)](https://github.com/s0v1x/EULERA)
 [![Heroku](https://pyheroku-badge.herokuapp.com/?app=eulera&style=flat)](https://eulera.herokuapp.com)
 [![GitHub license](https://img.shields.io/github/license/s0v1x/EULERA)](https://github.com/s0v1x/EULERA/blob/master/LICENSE)
