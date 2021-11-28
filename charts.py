@@ -291,14 +291,15 @@ def rt_chart(company):
 
     return fig
 
+
 def model_chart(company, hist):
     status = si.get_market_status()
     data = Ticker(company).history(period="ytd", interval="1d", adj_timezone=False)
     data = data.loc[company]
-    if status == 'REGULAR':
-        data = data.iloc[len(data) - len(hist) +1 : -1]
+    if status == "REGULAR":
+        data = data.iloc[len(data) - len(hist) + 1 : -1]
     else:
-        data = data.iloc[len(data) - len(hist) +1 : ]
+        data = data.iloc[len(data) - len(hist) + 1 :]
     data["date"] = pd.to_datetime(data.index).strftime("%Y-%m-%d %H:%M:%S")
     data.index = np.arange(0, len(data))
 
@@ -419,12 +420,9 @@ def indc_price(price, company):
     dd = datetime.strptime(str(data.index[-1]), "%Y-%m-%d")
     td = datetime.strptime(datetime.today().strftime("%Y-%m-%d"), "%Y-%m-%d")
     if td > dd:
-        prev = Ticker('AAPL').quotes['AAPL']["regularMarketPreviousClose"]
+        prev = Ticker("AAPL").quotes["AAPL"]["regularMarketPreviousClose"]
     else:
         prev = data.iloc[-1].close
-    print(prev)
-    print(price, "-------------------")
-    print(type(price), "-------------------")
     fig = go.Figure(
         data=[
             go.Indicator(

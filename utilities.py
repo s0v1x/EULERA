@@ -1,5 +1,6 @@
 import random
 
+
 def rand_agent(fname):
     lines = open(fname).read().splitlines()
     return random.choice(lines)
@@ -11,6 +12,7 @@ def human_format(num):
         magnitude += 1
         num /= 1000.0
     return "%.2f%s" % (num, ["", "K", "M", "G", "T", "P"][magnitude])
+
 
 def str_time(intrv):
     intrv = intrv.total_seconds()
