@@ -1499,14 +1499,14 @@ model_history = pd.DataFrame(columns=["date", "min_conf", "max_conf", "f_price"]
     [Input("dropdown_corp", "value"), Input("modal_price", "is_open")],
 )
 def update_forecast(dropdown_corp, is_open):
-    df = pd.read_csv("hist.csv", index_col=0)
-    if is_open and dropdown_corp == "AAPL":
-
-        response = requests.post(
+    df = pd.read_csv("history.csv", index_col=0)
+    response = requests.post(
             "http://euleraapi.herokuapp.com/predict",
             headers={"Content-Type": "application/json"},
             data=json.dumps(dict(ticker=dropdown_corp)),
         )
+
+    if is_open and dropdown_corp == "AAPL" and response.status_code == 200:
 
         res = response.json()
         dd = datetime.strptime(df.index[-1], "%Y-%m-%d")
@@ -1526,12 +1526,13 @@ def update_forecast(dropdown_corp, is_open):
                 f.write(data)
 
         return [
-            indc_price(148.4, dropdown_corp),
+            indc_price(res["forecast"], dropdown_corp),
             model_chart(dropdown_corp, df),
             "",
             {},
         ]
     else:
+        df = pd.DataFrame(columns=['f_price', 'min_conf', 'max_conf'])
         return [
             indc_price(0, "AAPL"),
             model_chart("AAPL", df),
