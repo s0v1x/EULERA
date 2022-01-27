@@ -26,19 +26,15 @@
 
 EULERA is a Machine Learning-based web app, dedicated for Stock Market Prediction. The app gives a precise forecasting of the stock price of the following day for any given stock under NASDAQ stock exchange.
 
-That means you get to choose your favorite company, and get in return the forecast for its stock price for the following day, something that is difficult to do, but **NOT for EULERA**.
+That means you get to choose your favorite company, and get in return the forecast for its stock price for the following day.
 
 Eulera uses AI based algorithmic forecasting solutions for the capital markets to uncover the best investment opportunities.
 
-Sometimes, it is not only the forecasting that you want. Well, we got you! 
-EULERA is not only providing you with accurate predictions, but also it gives you the opportunity to visualize technical indicators, financial ratios (for different time ranges), and also some metrics that gives insights about the performance of the company. In addition, EULERA provides you with the latest news related to your company of choice.
+Beside predicitons, EULERA gives the opportunity to visualize technical indicators, financial ratios (for different time ranges), and also some metrics that showcases the performance of the company chosen. In addition, the latest news related to the company of choice are gathered in one place.
 
 ## How is this all possible ?
 
 EULERA app is made from scratch using Dash framework, FastAPI, and the technical skills of the authors.
-
-***__Note__:*** the app is on its first stages of development, so stay allways in contact with the authors for the upcoming changes and for the new and exciting features that will be added.
-
 
 ## Project using 
 
@@ -72,6 +68,14 @@ To run the app
 ```bash
 py app.py
 ```
+
+## Important files description
+
+**app.py**: As the name indicates, it contains the code for creating EULERA
+
+**charts.py**: Creation of charts of the App using Plotly.
+
+**technical_indicators.py** computes different technical and financial indicators (RSI, SMA, EMA, TSI, ...etc) for the company of choice.
 
 ## License 
 
